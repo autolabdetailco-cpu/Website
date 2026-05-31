@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions — AutoLab Detailing Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    :root {
+      --black: #0a0a0a;
+      --dark: #111111;
+      --panel: #161616;
+      --border: #13d4e2;
+      --accent: #C7E906;
+      --accent-dim: rgba(34, 223, 182, 0.12);
+      --text: #e8e8e8;
+      --muted: #888888;
+      --white: #f5f5f5;
+    }
+ 
+    html { scroll-behavior: smooth; }
+ 
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 15px;
+      min-height: 100vh;
+    }
+ 
+    header {
+      background: var(--dark);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 500px; height: 200px;
+      background: radial-gradient(ellipse, rgba(200,160,74,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+ 
+    .logo-mark {
+      display: inline-block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--accent);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    a { 
+      text-decoration: none;
+      color: inherit; 
+      
+    }
+    a:hover {
+      color: rgb(0, 255, 191);
+}
+    header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 8vw, 72px);
+      letter-spacing: 3px;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    header h1 span { color: var(--accent); }
+    .header-sub {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+    .intro {
+      background: var(--accent-dim);
+      border: 1px solid rgba(200,160,74,0.3);
+      border-left: 3px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 2px;
+      margin-bottom: 56px;
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.7;
+    }
+    .toc {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      margin-bottom: 60px;
+      border-radius: 2px;
+    }
+    .toc-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 3px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+    @media (max-width: 520px) { .toc ol { grid-template-columns: 1fr; } }
+    .toc ol li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--accent); }
+    .toc ol li a::before {
+      content: attr(data-num);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      color: var(--accent);
+      min-width: 20px;
+    }
+    .section {
+      margin-bottom: 56px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .section.visible { opacity: 1; transform: translateY(0); }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--accent);
+      line-height: 1;
+      min-width: 36px;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .section > p { color: #bbb; margin-bottom: 16px; font-size: 15px; }
+    .subsection { margin: 24px 0 8px; }
+    .subsection-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    ul li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #bbb;
+      font-size: 15px;
+    }
+    ul li::before {
+      content: '—';
+      color: var(--accent);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 56px;
+    }
+
+    /* ── DISCOUNT CARDS ── */
+    .discount-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 520px) { .discount-grid { grid-template-columns: 1fr; } }
+    .discount-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 20px 22px;
+      border-radius: 2px;
+    }
+    .discount-card .dc-badge {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .discount-card .dc-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .discount-card .dc-desc {
+      font-size: 13px;
+      color: #bbb;
+      line-height: 1.6;
+    }
+    .no-stack-notice {
+      background: rgba(199, 233, 6, 0.06);
+      border: 1px solid rgba(199, 233, 6, 0.25);
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 2px;
+      font-size: 13px;
+      color: #bbb;
+      margin-top: 8px;
+    }
+    .no-stack-notice strong { color: var(--accent); }
+
+    .contact-block {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 32px;
+      margin-top: 60px;
+      border-radius: 2px;
+      text-align: center;
+    }
+    .contact-block .contact-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .contact-block .business-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 3px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .contact-items {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .contact-items a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+    .contact-items a:hover { opacity: 0.75; }
+    .footer-note {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .effective-date {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .back-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--accent);
+      color: var(--black);
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 100;
+    }
+    .back-top.show { opacity: 1; }
+    .back-top:hover { opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark"><a href="index.html">AutoLab Detailing Co.</a></div>
+  <h1>Terms &amp; <span>Conditions</span></h1>
+  <p class="header-sub">Mobile Car Detailing Services</p>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    Please read these Terms &amp; Conditions carefully before confirming any booking. By booking our services, you confirm that you have read, understood, and agree to be bound by these terms.
+  </div>
+
+  <nav class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1" data-num="01">Bookings &amp; Confirmation</a></li>
+      <li><a href="#s2" data-num="02">Deposits &amp; Payment Terms</a></li>
+      <li><a href="#s3" data-num="03">Cancellations &amp; Refunds</a></li>
+      <li><a href="#s4" data-num="04">Rescheduling</a></li>
+      <li><a href="#s5" data-num="05">Vehicle Condition &amp; Responsibilities</a></li>
+      <li><a href="#s6" data-num="06">Liability &amp; Damage Policy</a></li>
+      <li><a href="#s7" data-num="07">Weather &amp; Environmental Conditions</a></li>
+      <li><a href="#s8" data-num="08">Health &amp; Safety</a></li>
+      <li><a href="#s9" data-num="09">Discounts &amp; Promotions</a></li>
+      <li><a href="#s10" data-num="10">Agreement &amp; Acknowledgement</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section class="section" id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Bookings &amp; Confirmation</span>
+    </div>
+    <p>All bookings are subject to availability and are only confirmed once a deposit has been received. An unconfirmed booking does not guarantee a time slot.</p>
+    <ul>
+      <li>A booking confirmation will be sent via email or message once the deposit is processed.</li>
+      <li>It is the client's responsibility to ensure all vehicle and contact details provided at the time of booking are accurate.</li>
+      <li>We reserve the right to refuse or cancel any booking at our discretion, in which case any deposit paid will be refunded in full.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 2 -->
+  <section class="section" id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">Deposits &amp; Payment Terms</span>
+    </div>
+    <p>All appointments require a non-refundable booking fee to lock in your time slot. This fee is credited directly toward your total balance due upon completion of the service — it is not an additional charge.</p>
+    <ul>
+      <li>The remaining balance is due on the day of service, prior to or upon completion of the detail.</li>
+      <li>Accepted payment methods: cash, e-transfer, credit/debit.</li>
+      <li>Prices quoted are based on the vehicle condition described at the time of booking. If the vehicle is found to be in significantly worse condition upon arrival, we reserve the right to adjust the price or decline service. You will be notified before any work begins.</li>
+      <li>Full payment must be completed before the vehicle is returned to the client.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 3 -->
+  <section class="section" id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Cancellations &amp; Refunds</span>
+    </div>
+    <p>We understand that plans change. The following policy applies to all cancellations:</p>
+    <div class="subsection">
+      <div class="subsection-title">Client-Initiated Cancellations</div>
+      <ul>
+        <li>Cancellations made at least 24 hours before the scheduled appointment: your appointment will be cancelled and your booking fee refunded minus a small admin fee to cover processing.</li>
+        <li>Cancellations made with less than 24 hours' notice: the booking fee is forfeited in full as a cancellation fee. A new booking fee will be required to reschedule.</li>
+        <li>No-shows (client or vehicle unavailable at the time of service without prior notice): the appointment is cancelled, the booking fee is forfeited, and a new booking fee will be required to rebook.</li>
+      </ul>
+    </div>
+    <div class="subsection">
+      <div class="subsection-title">Service-Initiated Cancellations</div>
+      <ul>
+        <li>If we are required to cancel due to unforeseen circumstances (illness, equipment failure, severe weather, etc.), you will receive a full refund of your booking fee or the option to reschedule at no penalty.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 4 -->
+  <section class="section" id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">Rescheduling</span>
+    </div>
+    <ul>
+      <li>One complimentary reschedule is permitted provided at least 24 hours' notice is given.</li>
+      <li>Rescheduling requests made with less than 24 hours' notice may result in forfeiture of the deposit.</li>
+      <li>A second reschedule request may be treated as a cancellation, subject to the cancellation policy above.</li>
+      <li>Rescheduled appointments are subject to availability.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 5 -->
+  <section class="section" id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <span class="section-title">Vehicle Condition &amp; Client Responsibilities</span>
+    </div>
+    <p>To ensure the best results and a smooth service experience, clients agree to the following:</p>
+    <ul>
+      <li>The vehicle must be accessible and available at the confirmed location and time. If access is delayed by more than 15 minutes without notice, we reserve the right to treat the appointment as a no-show.</li>
+      <li>Personal items, valuables, and any items that may obstruct the detailing process should be removed from the vehicle prior to our arrival. We are not responsible for any damage to, or loss of, personal items left in the vehicle.</li>
+      <li>Clients must disclose any known pre-existing damage, fragile parts, aftermarket modifications, or sensitive surfaces at the time of booking. Failure to do so may limit the scope of our liability.</li>
+      <li>We reserve the right to photograph the vehicle before and after service for quality control and liability documentation.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 6 -->
+  <section class="section" id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <span class="section-title">Liability &amp; Damage Policy</span>
+    </div>
+    <p>We take great care with every vehicle and use professional-grade products and equipment. However, the following terms apply:</p>
+    <div class="subsection">
+      <div class="subsection-title">Pre-Existing Damage</div>
+      <ul>
+        <li>We are not liable for any pre-existing damage, including but not limited to: scratches, swirl marks, chips, faded paint, rust, worn trim, cracked glass, or deteriorated seals.</li>
+        <li>Pre-existing damage will be noted at the start of the appointment. Clients are encouraged to review and acknowledge this documentation before work begins.</li>
+      </ul>
+    </div>
+    <div class="subsection">
+      <div class="subsection-title">Chemical &amp; Water Damage</div>
+      <ul>
+        <li>Some surfaces (e.g., heavily oxidized paint, compromised clear coat, aging rubber seals) may react unexpectedly to cleaning products. We will exercise reasonable care, but cannot guarantee results on surfaces already in poor condition.</li>
+        <li>We are not liable for water ingress through pre-existing gaps, faulty seals, or open sunroofs/windows left by the client.</li>
+      </ul>
+    </div>
+    <div class="subsection">
+      <div class="subsection-title">Mechanical &amp; Electrical</div>
+      <ul>
+        <li>We are not responsible for any pre-existing mechanical or electrical issues that may surface during or after the detailing process (e.g., malfunctioning windows, sensors, or electronics).</li>
+      </ul>
+    </div>
+    <div class="subsection">
+      <div class="subsection-title">Claims</div>
+      <ul>
+        <li>Any damage claims must be reported before the vehicle leaves the service location. Claims submitted after the vehicle has been driven away may not be accepted.</li>
+        <li>We will work in good faith to investigate and resolve any legitimate damage claims promptly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 7 -->
+  <section class="section" id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <span class="section-title">Weather &amp; Environmental Conditions</span>
+    </div>
+    <p>As a mobile service, our work is subject to weather conditions. In the event of severe weather (heavy rain, snow, extreme temperatures, lightning), we reserve the right to reschedule for the safety of our staff and to ensure service quality.</p>
+    <ul>
+      <li>We will contact you as early as possible if weather-related rescheduling is necessary.</li>
+      <li>No cancellation penalty applies to weather-related rescheduling initiated by us.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 8 -->
+  <section class="section" id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <span class="section-title">Health &amp; Safety</span>
+    </div>
+    <ul>
+      <li>Our staff reserve the right to refuse or stop service if the working environment poses a health or safety risk (e.g., hazardous materials in the vehicle, aggressive behaviour, unsafe location).</li>
+      <li>Clients are requested to keep a safe distance from the work area during the service.</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 9 — DISCOUNTS (NEW) -->
+  <section class="section" id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <span class="section-title">Discounts &amp; Promotions</span>
+    </div>
+    <p>We offer the following discounts to reward new and returning clients. All discounts are applied at the time of final payment.</p>
+
+    <div class="discount-grid">
+      <div class="discount-card">
+        <div class="dc-badge">5% OFF</div>
+        <div class="dc-label">First-Time Client</div>
+        <div class="dc-desc">New clients receive 5% off their first booking. Applied automatically — no code needed. Valid on a single service only and does not carry over to future bookings.</div>
+      </div>
+      <div class="discount-card">
+        <div class="dc-badge">15% OFF</div>
+        <div class="dc-label">Referral Discount</div>
+        <div class="dc-desc">When an existing client refers someone new, both the referring client and the referred client each receive 15% off their next booking. The discount is applied once the referred client completes their first paid appointment.</div>
+      </div>
+    </div>
+
+    <div class="no-stack-notice">
+      <strong>Non-Stackable Policy —</strong> Discounts cannot be combined. Only one discount may be applied per booking. Clients who are referred are eligible for the referral discount (15%) only — the first-time client discount does not apply in addition to it. Where only one discount applies, it will be honoured automatically.
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Referral Banking Rules</div>
+      <ul>
+        <li>Each successful referral earns one 15% discount, applied to one future booking — one discount per appointment, regardless of how many people were referred.</li>
+        <li>A maximum of 3 referral discounts may be banked at any one time. Referring more than 3 people in a single period does not increase the bank beyond 3.</li>
+        <li>Banked discounts are applied to consecutive future bookings — for example, referring 10 people results in 15% off your next 3 bookings, not a larger discount on one.</li>
+        <li>Any banked referral discounts that are unused expire 2 weeks from the date they were earned. It is the client's responsibility to use them within this window.</li>
+        <li>If new referrals are made after the 2-week window has passed (or after the existing bank is used up), a fresh bank of up to 3 discounts begins — this continues in perpetuity as long as referrals remain active.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 10 -->
+  <section class="section" id="s10">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <span class="section-title">Agreement &amp; Acknowledgement</span>
+    </div>
+    <p>By proceeding with a booking and/or making a deposit payment, the client confirms that they:</p>
+    <ul>
+      <li>Have read and understood these Terms &amp; Conditions in full.</li>
+      <li>Agree to be bound by these terms for all current and future bookings.</li>
+      <li>Are the registered owner of the vehicle or have obtained the owner's permission to authorize detailing services.</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact-block section">
+    <div class="contact-label">Questions? Get in touch before booking</div>
+    <div class="business-name"><a href="index.html">AutoLab Detailing Co.</a></div>
+    <div class="contact-items">
+      <a href="tel:+12263405786">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+        +1 (226) 340-5786
+      </a>
+      <a href="mailto:autolab.detail.co@gmail.com">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        autolab.detail.co@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <p class="footer-note">Thank you for choosing AutoLab Detailing Co. We look forward to making your vehicle shine.</p>
+  <p class="effective-date">Effective Date: May 24, 2026</p>
+
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  sections.forEach(s => observer.observe(s));
+
+  const btn = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 400);
+  });
+</script>
+</body>
+</html>
