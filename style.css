@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoLab Detailing Co. — amherstburg's Premier Car Detailing Service</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo-icon"><img src="media/AutoLab_Logo_2.png" style="width: 140%; height: auto;"></div>
+      <div class="logo-text">AutoLab<span>Detailing Co.</span></div>
+    </div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#booking" class="nav-cta">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-shape"></div>
+    <div class="hero-accent"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-inner">
+
+      <!-- LEFT: Text -->
+      <div class="hero-content">
+        <div class="hero-badge">Amherstburg's Premier Detailing Service</div>
+        <h1>
+          Precision.<br>
+          <span class="line2">Polish.</span><br>
+          <span class="line3">Perfection.</span>
+        </h1>
+        <p>AutoLab Detailing Co. delivers showroom-grade results using professional products and a hands-on approach that protects your investment for the long haul.</p>
+        <div class="hero-btns">
+          <button class="btn-lime" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book a Detail</button>
+          <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-num">Simple</div><div class="stat-label">Pricing</div></div>
+          <div><div class="stat-num">48H</div><div class="stat-label">Book Within</div></div>
+          <div><div class="stat-num">Mobile</div><div class="stat-label">services across Essex County</div></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Carousel — replace car1.jpg, car2.jpg, etc. with your actual filenames -->
+      <div class="hero-image">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="media/Promo.png" alt="AutoLab Promotion" /></div>
+            <div class="carousel-slide"><img src="media/Discount Promo.png" alt="AutoLab Refferal Discount" /></div>
+            <!--<div class="carousel-slide"><img src="media/.jpg" alt="AutoLab Team Shot" /></div>-->
+            <div class="carousel-slide"><img src="media/AutoLab_Logo.png" alt="AutoLab Detaling Co." /></div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-tag">What We Offer</div>
+    <div class="section-title">Services &amp; Pricing</div>
+    <div class="section-sub">Every package uses professional-grade products</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="svc-icon"><i class="ti ti-droplet"></i></div>
+        <div class="svc-name">Exterior Wash</div>
+        <div class="svc-desc">Pressure wash with shampoo, hand wash, dry, windows cleaned, tires cleaned</div>
+        <div class="svc-price">$50 small cars<br>$70 SUV's and trucks<span>/ standard</span></div>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><i class="ti ti-sparkles"></i></div>
+        <div class="svc-name">Interior</div>
+        <div class="svc-desc">Vacuum, rug brush, spot removal, wipe-down, leather & upholstery conditioning</div>
+        <div class="svc-price">$60 small cars<br> $80 SUV's and trucks<span>/ starting</span></div>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><i class="ti ti-tool"></i></div>
+        <div class="svc-name">Full Detail</div>
+        <div class="svc-desc">Single or two-stage machine polish to eliminate swirl marks, scratches, and oxidation.</div>
+        <div class="svc-price">$100 small cars<br> $140 SUV's and trucks<span>/ starting</span></div>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="svc-name">Add-ons</div>
+        <div class="svc-desc">Tire Shine<br>Cermaic Coating<br>Turtlewax Spry & Dry Wax<br>Chemical Guys WetButterWax<br>
+        <div class="svc-price">from $5 to $35 <span>/Based on vehicle size & add-ons. </span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+<section id="gallery">
+  <div class="section-tag">Before &amp; After</div>
+  <div class="section-title">The Results Speak</div>
+  <div class="section-sub">Hover over any photo to reveal real transformations from real AutoLab clients.</div>
+  <!--<div class="gallery-tabs">
+    <button class="tab-btn active">All</button>
+    <button class="tab-btn">Paint</button>
+    <button class="tab-btn">Interior</button>
+    <button class="tab-btn">Ceramic</button>
+  </div>-->
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="media/Pacifica 1.png" alt="Before" class="image">
+      <div class="overlay"><img src="media/Pacifica 2.png" alt="After" class="image"></div>
+      <span class="badge badge-before"></span>
+      <span class="badge badge-after"></span>
+      <div class="gallery-label">Exterior · Pacifica</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="media/Mazda_Before2.jpg" alt="Before" class="image">
+      <div class="overlay"><img src="media/Mazda_After2.jpg" alt="After" class="image"></div>
+      <span class="badge badge-before"></span>
+      <span class="badge badge-after"></span>
+      <div class="gallery-label">Interior Vacumum · Nissan Kicks</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="media/Kicks 3.jpg" alt="Before" class="image">
+      <div class="overlay"><img src="media/Red Kicks 2.png" alt="After" class="image"></div>
+      <span class="badge badge-before"></span>
+      <span class="badge badge-after"></span>
+      <div class="gallery-label">Exterior · Nissan Kicks</div>
+    </div>
+
+    <!--div class="gallery-item">
+      <img src="media/img 7.jpg" alt="Before" class="image">
+      <div class="overlay"><img src="media/img 8.jpg" alt="After" class="image"></div>
+      <span class="badge badge-before"></span>
+      <span class="badge badge-after"></span>
+      <div class="gallery-label">Coming up</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="media/png" alt="Before" class="image">
+      <div class="overlay"><img src="media/img 2.jpg" alt="After" class="image"></div>
+      <span class="badge badge-before"></span>
+      <span class="badge badge-after"></span>
+      <div class="gallery-label">Coming up</div>
+    </div>
+
+    
+    <div class="gallery-item">
+      <img src="media/png" alt="Before" class="image">
+      <div class="overlay"><img src="media/img 2.jpg" alt="After" class="image"></div>
+      <span class="badge badge-before"></span>
+      <span class="badge badge-after"></span>
+      <div class="gallery-label">Coming up</div>
+    </div-->
+
+
+  </div>
+</section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-tag">Client Reviews</div>
+    <div class="section-title">What Customers Say</div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Really satisfied with the interior job on my 2022 Kicks—they pulled all the ground-in dirt and salt right out of the carpets and left the floors looking spotless."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">VC</div>
+          <div><div class="testi-name">Valentina Cuenca</div><div class="testi-car">2022 Nissan Kicks</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"They did a great job on my Pacifica, leaving the massive amount of glass and the sliding door tracks completely spotless and streak-free."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">RG</div>
+          <div><div class="testi-name">Romeo G.</div><div class="testi-car">2021 Chrysler Pacifica</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Awesome exterior job on my CX-50—the Butter Wet Wax made the metallic paint look incredibly rich and reflective, and they did a beautiful job hand-drying it so there are zero water spots on the big glossy front grille."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">JU</div>
+          <div><div class="testi-name">Jazz G.</div><div class="testi-car">2022 Mazda CX-50</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="section-tag">Schedule Your Visit</div>
+  <div class="booking-wrapper">
+
+    <div class="booking-info">
+      <div class="section-title">Book a Detail</div>
+      <div class="section-sub">Fill out the form to confirm your appointment. Proudly serving Amherstburg and surrounding areas. For more information and inquiries please contact:</div>
+      <ul class="contact-list">
+        <li><i class="ti ti-phone"></i>(226) 340-5786 <p class="color_font">or</p> (248) 843-1887</li>
+        <li><i class="ti ti-mail"></i>autolab.detail.co@gmail.com</li>
+        <li><i class="ti ti-map-pin"></i>Amherstburg, Ontario</li>
+        <li><i></i><a href="AutoLab Detailing Co. T&C.html" target="_blank">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+      <!-- SQUARE APPOINTMENTS EMBED -->
+      <div class="booking-form">
+        <script src='https://square.site/appointments/buyer/widget/gh90ce5i3miwbk/LMAG5E98277JB.js'></script>
+      </div>
+      <!-- END SQUARE APPOINTMENTS EMBED -->
+
+  </div>
+</section>
+
+  <footer>
+    <div class="footer-brand">Auto<span>Lab</span> Detailing Co.</div>
+    <div class="footer-copy"><a href="AutoLab Detailing Co. T&C.html" target="_blank">Terms & Conditions</a> 2026 AutoLab Detailing Co. Amherstburg, Ontario.</div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Book</a>
+    </div>
+  </footer>
+
+  <script>
+    // Gallery tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Booking form
+    //function submitForm() {
+      //const name = document.getElementById('fname').value.trim();
+      //const svc  = document.getElementById('svc-sel').value;
+      //const date = document.getElementById('bdate').value;
+      //if (!name || !svc || !date) {
+        //alert('Please fill in your name, a service, and a preferred date.');
+        //return;
+      //}
+      //document.getElementById('success-msg').style.display = 'block';
+      //const btn = document.querySelector('.form-submit');
+      //btn.disabled = true;
+      //btn.style.opacity = '0.5';
+    //}
+
+    // Carousel
+    const track   = document.querySelector('.carousel-track');
+    const dots    = document.querySelectorAll('.dot');
+    const total   = document.querySelectorAll('.carousel-slide').length;
+    let current   = 0;
+    let timer;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function next() { goTo(current + 1); }
+
+    function startAuto() { timer = setInterval(next, 7000); }
+    function stopAuto()  { clearInterval(timer); }
+
+    // Pause on hover
+    const carousel = document.querySelector('.carousel');
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+
+    // Dot clicks
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+    });
+
+    startAuto();
+  </script>
+
+</body>
+</html>
